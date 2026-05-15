@@ -18,7 +18,20 @@ public class Practice {
         System.out.println(myNode.value);
         System.out.println(myNode.next.value);
         System.out.println(myNode.next.next.value);
+    }
 
+    public Node (char value, Node next){
+        this.value = value;
+        this.next = next;
+    }
 
+    public static int length(Node head){
+        int count = 0;
+        Node current = this;
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+        return count;
     }
 }
